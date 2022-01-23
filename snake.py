@@ -1,18 +1,14 @@
-import pynput
-import os
-import time
 
 def move():
     pass
 def draw():
-    snake = [{"X": 2, "Y": 1},
-             {"X": 3, "Y": 1},
-             {"X": 4, "Y": 1},
-             {"X": 4, "Y": 2},
-             {"X": 4, "Y": 3},
-             {"X": 4, "Y": 4}
+    snake = [{"x":1, "y":1},
+             {"x": 3, "y":1},
+             {"x": 4, "y":1},
+             {"x": 4, "y":2},
+             {"x": 4, "y":3},
+             {"x": 4, "y":4}
              ]
-
     item = snake[0]
     y = 0
     while y < 20:
@@ -21,7 +17,7 @@ def draw():
         while x < 100:
             char = 'o'
             for item in snake:
-                if item['X'] == x and item['Y'] == y:
+                if item['x']== x and item['y']= y:
                     char = "g"
             result += char
             x += 1
@@ -53,6 +49,7 @@ pynput.keyboard.Listener(
 
 def draw():
     pass
+              
 while True:
     os.system('cls')
     move()
