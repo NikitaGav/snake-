@@ -5,12 +5,12 @@ import time
 def move():
     pass
 def draw():
-    snake = [{"snakeX": 2, "snakeY": 1},
-             {"snakeX": 3, "snakeY": 1},
-             {"snakeX": 4, "snakeY": 1},
-             {"snakeX": 4, "snakeY": 2},
-             {"snakeX": 4, "snakeY": 3},
-             {"snakeX": 4, "snakeY": 4}
+    snake = [{"X": 2, "Y": 1},
+             {"X": 3, "Y": 1},
+             {"X": 4, "Y": 1},
+             {"X": 4, "Y": 2},
+             {"X": 4, "Y": 3},
+             {"X": 4, "Y": 4}
              ]
 
     item = snake[0]
@@ -21,7 +21,7 @@ def draw():
         while x < 100:
             char = 'o'
             for item in snake:
-                if item['snakeX'] == x and item['snakeY'] == y:
+                if item['X'] == x and item['Y'] == y:
                     char = "g"
             result += char
             x += 1
